@@ -17,3 +17,8 @@ git commit -m "why-commited-this-code"
 git push -u origin main
 ```
 * Updated .gitconfig file with new credintials
+
+* naming convention: use small case with Hyphons(-). No spaces
+```
+git add . ; git commit -m "some-message"; git push -u origin main
+```
