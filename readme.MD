@@ -13,4 +13,7 @@ git add <file-name>
 git commit -m "why-commited-this-code"
 ```
 *  Push the changes to GitHub/Central repo
+```
+git push -u origin main
+```
 * Updated .gitconfig file with new credintials
