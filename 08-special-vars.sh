@@ -9,3 +9,11 @@ echo "Hostname: $HOSTNAME"
 echo "Process ID of current shell script: $$"
 sleep 30 &
 echo "Process ID of last background command: $!"
+
+all_var=$@
+count=$#
+script_name=$0
+
+echo "all_var: $all_var"
+echo "count: $count"
+echo "script_name: $script_name"
