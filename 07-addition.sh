@@ -9,7 +9,7 @@ No2=$2
 count=$#
 echo "Number of variables passed: $count"
 #exit 1
-if [$count -eq 2]
+if [ $count -eq 2 ]
 then
     sum=$(($No1+$No2))
     echo "Addition of $No1 and $No2 is: $sum"
