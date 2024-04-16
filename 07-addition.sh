@@ -5,7 +5,8 @@
 No1=$1
 No2=$2
 
-
+echo "Number of variables passed: $#"
+exit 1
 if [$# -eq 2]
 then
     sum=$(($No1+$No2))
