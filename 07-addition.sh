@@ -6,7 +6,7 @@ No1=$1
 No2=$2
 
 
-count=${$#}
+count=$#
 echo "Number of variables passed: $count"
 exit 1
 if [$# -eq 2]
