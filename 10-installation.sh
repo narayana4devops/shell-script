@@ -7,7 +7,9 @@ if [ $userID -ne 0 ]
 then
     echo "Please run this script with root access."
     dnf install mysql -y
-    exit 1 # manually exit if error comes.
+#    exit 1 # manually exit if error comes.
 else
     echo "You are root user"
 fi
+
+echo "is script proceeding?"
