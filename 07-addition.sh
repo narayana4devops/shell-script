@@ -5,6 +5,12 @@
 No1=$1
 No2=$2
 
-sum=$(($No1+$No2))
 
-echo "Addition of $No1 and $No2 is: $sum"
+if [$# -eq 2]
+then
+    sum=$(($No1+$No2))
+    echo "Addition of $No1 and $No2 is: $sum"
+else
+    echo "you must pass 2 arguments"
+    exit 1
+fi
