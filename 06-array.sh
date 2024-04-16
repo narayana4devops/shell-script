@@ -1,5 +1,5 @@
 #!/bin/bash
-NAMES=("Lakshmi" "Narayana" pathi)
+NAMES=("Lakshmi" "Narayana" "pathi")
 
 # size of above array is 3.
 # index are 0,1,2
