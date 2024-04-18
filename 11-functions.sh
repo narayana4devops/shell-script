@@ -3,6 +3,7 @@
 user_id=$(id -u)
 timestamp=$(date +%F-%H-%M-%S)
 script_name=$(echo $0 | cut -d "." -f1)
+log_file=/tmp/$script_name-$timestamp.log
 
 
 echo "time: $timestamp"
@@ -26,5 +27,8 @@ validate(){
     fi
 }
 
-dnf install mysql -y 
+dnf install mysql -y &>> $log_file
 validate $? "Installation of mysql is"
+
+dnf install git -y &>> $log_file
+validate $? "Installation of git is"
