@@ -9,7 +9,8 @@ log_file=/tmp/$script_name-$timestamp.log
 # For Debug purpose
 #echo "time: $timestamp"
 #echo "script_name: $script_name"
-echo "Script execution started at:timestamp$" &>> $log_file
+echo "Script execution started at:$timestamp" &>> $log_file
+echo ""
 
 # Variables for colors
 R="\e[31m"
@@ -49,4 +50,5 @@ do
     fi
 done
 
-echo "Script execution completed at:timestamp$" &>> $log_file
+echo ""
+echo "Script execution completed at:$timestamp" &>> $log_file
