@@ -32,3 +32,6 @@ validate $? "Installation of mysql is"
 
 dnf install git -y &>> $log_file
 validate $? "Installation of git is"
+
+dnf install dockerr -y &>> $log_file
+validate $? "Installing of Docker is"
