@@ -39,7 +39,7 @@ validate(){
 for i in $@
 do
     dnf list installed $i &>> $log_file
-    if [ $? -ne 0 ]
+    if [ $? -eq 0 ]
     then
         echo -e "$i Already Installed...$Y SKIPPING $N"       
     else
