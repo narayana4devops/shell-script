@@ -7,8 +7,9 @@ script_name=$(echo $0 | cut -d "." -f1)
 log_file=/tmp/$script_name-$timestamp.log
 
 # For Debug purpose
-echo "time: $timestamp"
-echo "script_name: $script_name"
+#echo "time: $timestamp"
+#echo "script_name: $script_name"
+echo "Script execution started at:timestamp$" &>> $log_file
 
 # Variables for colors
 R="\e[31m"
@@ -47,3 +48,5 @@ do
         validate $? "Installation of $i is"
     fi
 done
+
+echo "Script execution completed at:timestamp$" &>> $log_file
