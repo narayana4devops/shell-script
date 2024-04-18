@@ -13,6 +13,7 @@ echo "script_name: $script_name"
 # Variables for colors
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 if [ $user_id -ne 0 ]
@@ -37,6 +38,12 @@ validate(){
 
 for i in $@
 do
-    dnf install $i  -y &>> $log_file
-    validate $? "Installation of $i is"
+    dnf list installed $i &>> $log_file
+    if [ $? -ne 0 ]
+    then
+        echo -e "$i Already Installed...$Y SKIPPING $N"       
+    else
+        dnf install $i -y &>> $log_file
+        validate $? "Installation of $i is"
+    fi
 done
