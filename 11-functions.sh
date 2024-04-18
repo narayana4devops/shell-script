@@ -15,3 +15,16 @@ then
 else
     echo "You are super user."
 fi
+
+validate(){
+    if [ $1 -ne 0 ]
+    then
+        echo "$2...FAILURE"
+        exit 1
+    else
+        echo "$2...SUCESS"
+    fi
+}
+
+dnf install mysql -y 
+validate( $? "Installation of mysql is")
