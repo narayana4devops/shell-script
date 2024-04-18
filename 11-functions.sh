@@ -27,4 +27,4 @@ validate(){
 }
 
 dnf install mysql -y 
-validate( $? "Installation of mysql is")
+validate $? "Installation of mysql is"
