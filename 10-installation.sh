@@ -22,4 +22,14 @@ else
     echo "Installation of mysql...SUCESS"
 fi
 
+sudo dnf install git -y
+
+if [ $? -ne 0 ]
+then
+    echo "Installation of Git...FAILURE"
+    exit 1
+else
+    echo "Installation of Git...SUCESS"
+fi
+
 echo "is script proceeding?"
