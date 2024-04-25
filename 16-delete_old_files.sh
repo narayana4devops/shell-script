@@ -12,4 +12,12 @@ then
     echo -e "$G SOURCE_DIRECTORY exists $N"
 else
     echo -e "$R SOURCE_DIRECTORY not exist $N"
+    exit 1
 fi
+
+Files=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
+
+while IFS= read -r line
+do
+    echo $line
+done << $Files
