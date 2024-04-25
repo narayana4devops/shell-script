@@ -18,4 +18,4 @@ do
     fi
 done <<< $disk_usage
 
-echo "final message: $message"
+echo -e "final message: $message"
