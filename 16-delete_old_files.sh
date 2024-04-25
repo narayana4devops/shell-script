@@ -9,7 +9,7 @@ N="\e[0m"
 
 if [ -d $SOURCE_DIRECTORY ]
 then
-    echo "$G SOURCE_DIRECTORY exists $N"
+    echo -e "$G SOURCE_DIRECTORY exists $N"
 else
-    echo "$R SOURCE_DIRECTORY not exist $N"
+    echo -e "$R SOURCE_DIRECTORY not exist $N"
 fi
