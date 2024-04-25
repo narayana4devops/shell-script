@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIRECTORY=/tmp/app-dir
+SOURCE_DIRECTORY=/tmp/app-dir/
 
 R="\e[31m"
 G="\e[32m"
@@ -20,4 +20,4 @@ Files=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 while IFS= read -r line
 do
     echo $line
-done << $Files
+done <<< $Files
