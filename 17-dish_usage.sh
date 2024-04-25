@@ -5,5 +5,5 @@ disk_treshold=6
 
 while IFS= read -r line
 do
-
+    echo $line
 done <<< $disk_usage
