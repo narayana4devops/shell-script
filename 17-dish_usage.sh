@@ -14,7 +14,7 @@ do
     if [ $usage -ge $disk_treshold ]
     then
         echo "$folder is more than $disk_treshold, current usage is : $usage"
-        message="$folder is more than $disk_treshold, current usage is : $usage"
+        message+="$folder is more than $disk_treshold, current usage is : $usage"
     fi
 done <<< $disk_usage
 
